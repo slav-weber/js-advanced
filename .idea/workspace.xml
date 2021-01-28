@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="Structure changes">
+      <change beforePath="$PROJECT_DIR$/.idea/lesson_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/js-advanced-github.iml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../js-advanced-github" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1nfJF87azO5QIxeBdGfzgZlrFdf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="" />
+      <created>1611775106436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611775106436</updated>
+      <workItem from="1611775108258" duration="5100000" />
+      <workItem from="1611816911223" duration="1110000" />
+      <workItem from="1611846992918" duration="221000" />
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1611775171583</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611775171583</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Classwork, task0">
+      <created>1611775993485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611775993485</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Classwork, task1">
+      <created>1611776607669</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1611776607669</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Classwork, task2">
+      <created>1611777243434</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611777243434</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Classwork, task3">
+      <created>1611779096255</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611779096255</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/develop" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Init" />
+    <MESSAGE value="Classwork, task0" />
+    <MESSAGE value="Classwork, task1" />
+    <MESSAGE value="Classwork, task2" />
+    <MESSAGE value="Classwork, task3" />
+    <MESSAGE value="Structure changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Structure changes" />
+  </component>
+</project>
