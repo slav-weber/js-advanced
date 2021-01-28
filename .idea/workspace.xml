@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="Structure changes">
-      <change beforePath="$PROJECT_DIR$/.idea/lesson_1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/js-advanced-github.iml" afterDir="false" />
+    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lesson_1/homework/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_1/homework/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_1/homework/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_1/homework/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_1/homework/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_1/homework/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +21,7 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../js-advanced-github" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1nfJF87azO5QIxeBdGfzgZlrFdf" />
@@ -33,10 +36,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_1/homework" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1\homework" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1" />
     </key>
@@ -52,6 +59,7 @@
       <workItem from="1611775108258" duration="5100000" />
       <workItem from="1611816911223" duration="1110000" />
       <workItem from="1611846992918" duration="221000" />
+      <workItem from="1611847332349" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -88,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611779096255</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Project refactor">
+      <created>1611847460630</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611847460631</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +142,7 @@
     <MESSAGE value="Classwork, task2" />
     <MESSAGE value="Classwork, task3" />
     <MESSAGE value="Structure changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure changes" />
+    <MESSAGE value="Project refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project refactor" />
   </component>
 </project>
