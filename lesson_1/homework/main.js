@@ -37,4 +37,78 @@
       myNumber.toString(16) // fb
 */
 
-console.log('Init')
+// Background Color Randomizer
+const BCR = {
+    nodeStructure: null,
+    wrapper: document.createElement('div'),
+    canvas: document.createElement('div'),
+    button: document.createElement('button'),
+    disco: document.createElement('button'),
+    canvasColor: null,
+    timer: null,
+
+    init(selector) {
+        this.createNodeStructure();
+        this.button.addEventListener('click', () => {
+            BCR.changeColor();
+            BCR.stopDisco();
+        });
+        this.disco.addEventListener('click', () => {
+            BCR.runDisco();
+        });
+        document.querySelector(selector).append(this.nodeStructure);
+    },
+
+    createNodeStructure() {
+        this.wrapper.classList.add('bcr-wrapper');
+        this.canvas.classList.add('bcr-canvas');
+        this.canvas.style.cssText = 'width: 100%; height: 300px; background-color: red; margin-bottom: 15px; transition: 0.25s';
+        this.button.classList.add('bcr-button');
+        this.button.style.cssText = 'margin-right: 15px';
+        this.button.textContent = 'Change color';
+        this.disco.classList.add('bcr-disco');
+        this.disco.textContent = 'Do disco';
+        this.nodeStructure = this.wrapper;
+        this.nodeStructure.append(this.canvas);
+        this.nodeStructure.append(this.button);
+        this.nodeStructure.append(this.disco);
+    },
+
+    changeColor() {
+        this.canvas.style.backgroundColor = this.getRandomColor();
+    },
+
+    runDisco() {
+        if(!this.timer) {
+            this.timer = setInterval(() => {
+                this.changeColor();
+            }, 500);
+        }
+    },
+
+    stopDisco() {
+        clearInterval(this.timer);
+        this.timer = null;
+    },
+
+    getRandomColor() {
+        let r = this.getRandomValue(0, 255).toString(16);
+        if (r.length < 2) r = '0' + r;
+        let g = this.getRandomValue(0, 255).toString(16);
+        if (g.length < 2) g = '0' + g;
+        let b = this.getRandomValue(0, 255).toString(16);
+        if (b.length < 2) b = '0' + b;
+        this.canvasColor = `#${r}${g}${b}`;
+        return this.canvasColor;
+    },
+
+    getRandomValue(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+}
+
+BCR.init('#app');
+
+console.log(BCR);

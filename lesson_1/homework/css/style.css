@@ -20,18 +20,10 @@ img {
     min-width: 640px;
     max-width: 760px;
     min-height: 150px;
-
-    margin-top: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
-
+    margin: 20px 10px;
     box-sizing: border-box;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-
+    padding: 30px 50px;
     background: #fff;
-
 }
 
 .section {
