@@ -1,26 +1,52 @@
+"use strict"
+/*
+  Задание 1.
 
-  /*
+  Написать скрипт который будет будет переключать вкладки по нажатию
+  на кнопки в хедере.
 
-    Задание 1.
+  Главное условие - изменять файл HTML нельзя.
 
-    Написать скрипт который будет будет переключать вкладки по нажатию
-    на кнопки в хедере.
+  Алгоритм:
+    1. Выбрать каждую кнопку в шапке
+       + бонус выбрать одним селектором
 
-    Главное условие - изменять файл HTML нельзя.
+    2. Повесить кнопку онклик
+        button1.onclick = function(event) {
 
-    Алгоритм:
-      1. Выбрать каждую кнопку в шапке
-         + бонус выбрать одним селектором
+        }
+        + бонус: один обработчик на все три кнопки
 
-      2. Повесить кнопку онклик
-          button1.onclick = function(event) {
+    3. Написать функцию которая выбирает соответствующую вкладку
+       и добавляет к ней класс active
 
-          }
-          + бонус: один обработчик на все три кнопки
+    4. Написать функцию hideAllTabs которая прячет все вкладки.
+       Удаляя класс active со всех вкладок
+*/
 
-      3. Написать функцию которая выбирает соответствующую вкладку
-         и добавляет к ней класс active
+let buttonContainer = document.querySelector('#buttonContainer');
+let buttons = document.querySelectorAll('.showButton');
+let tabContainer = document.querySelector('.tabContainer');
+let tabs = document.querySelectorAll('.tab');
+let hideAllTabsBtn = document.createElement('button');
 
-      4. Написать функцию hideAllTabs которая прячет все вкладки.
-         Удаляя класс active со всех вкладок
-  */
+hideAllTabsBtn.classList.add('close-all-tabs');
+hideAllTabsBtn.textContent = "Закрыть все";
+hideAllTabsBtn.addEventListener('click', hideAllTabs);
+buttonContainer.append(hideAllTabsBtn);
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        showTab(button);
+    });
+});
+
+function showTab(element) {
+    tabContainer.querySelector(`[data-tab="${element.dataset.tab}"]`).classList.toggle('active');
+}
+
+function hideAllTabs() {
+    tabs.forEach((tab) => {
+       tab.classList.remove('active');
+    });
+}
