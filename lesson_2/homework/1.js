@@ -23,18 +23,4 @@
 
       4. Написать функцию hideAllTabs которая прячет все вкладки.
          Удаляя класс active со всех вкладок
-
-    Методы для работы:
-
-      getElementById
-      querySelector
-      classList
-      classList.add
-      forEach
-      onclick
-
-      element.onclick = function(event) {
-        // do stuff ...
-      }
-
   */
