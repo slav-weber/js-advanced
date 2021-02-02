@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_2/2.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/DOCS/GIT.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/DOCS/UNIX.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/classwork/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/classwork/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/classwork/task1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/classwork/task2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/classwork/task3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/homework/1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/homework/1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/homework/img/cat2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/homework/img/cat4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/homework/img/cat7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/public/css/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/public/css/style.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/public/js/1.className.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_2/public/js/2.let_const.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_1/1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2/classwork/task2.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2/classwork/task2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_2/classwork/task3.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_2/classwork/task3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +62,8 @@
       <workItem from="1611847332349" duration="7007000" />
       <workItem from="1611903163115" duration="18000" />
       <workItem from="1611913365849" duration="2803000" />
-      <workItem from="1612198676132" duration="7816000" />
+      <workItem from="1612198676132" duration="7899000" />
+      <workItem from="1612248307218" duration="2912000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -144,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611915207003</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Lesson 2, classwork 1 &amp; 2">
+      <created>1612210147457</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612210147457</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +178,7 @@
     <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Prepare homework files" />
     <MESSAGE value="Lesson 1, homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 1, homework" />
+    <MESSAGE value="Lesson 2, classwork 1 &amp; 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 2, classwork 1 &amp; 2" />
   </component>
 </project>

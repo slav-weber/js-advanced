@@ -63,7 +63,7 @@
         3 -> three
         5 -> five
         11 -> eleven
-        115 -> twelve
+        115 -> ohf
     */
 
     let mouseHover = document.getElementById('mouseHover');
@@ -114,9 +114,43 @@
 
     // 4
     let counter = 0;
+    let keysArray = [];
+    let keysResult = document.querySelector('#keyboardResult');
     keyboardButton.addEventListener('keydown', (event) => {
-
+        counter++;
+        if(keysArray[event.keyCode]) {
+            ++keysArray[event.keyCode].clicks;
+        } else {
+            keysArray[event.keyCode] = {
+              'keyCode': event.keyCode,
+              'key': event.key,
+              'clicks': 1,
+            };
+        }
+        updateKeysList();
+        updateClass();
     })
+    function updateKeysList(){
+        let clicksCount = 0;
+        keysResult.innerHTML = '';
+        keysArray.forEach((key) => {
+            keysResult.innerHTML += `id: ${key.keyCode}| k: ${key.key} | c: ${key.clicks} <br>`;
+            clicksCount += key.clicks;
+        });
+    }
+    function updateClass() {
+        if(counter === 1) {
+            keysResult.classList.add('one');
+        } else if (counter === 3) {
+            keysResult.classList.add('three');
+        } else if (counter === 5) {
+            keysResult.classList.add('five');
+        } else if (counter === 11) {
+            keysResult.classList.add('eleven');
+        } else if (counter === 115) {
+            keysResult.classList.add('ohf');
+        }
+    }
 </script>
 </body>
 </html>
