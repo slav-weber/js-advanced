@@ -121,6 +121,10 @@ body{
   border: none;
 }
 .navButton:hover{
-  cursor: poiner;
+  cursor: pointer;
   background: red;
+}
+
+img {
+  max-width: 100%;
 }
