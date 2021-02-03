@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
     <title>Taks 1</title>
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="wrap" id="wrap">
-        <h1>Добавление списка элементов по условию</h1>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="wrap" id="wrap">
+    <h1>Добавление списка элементов по условию</h1>
 
-        <header>
-          <input type="text" placeholder="" id="Receiver"/>
-          <input type="submit" value="Add" id="AddToList"/>
-        </header>
+    <header>
+        <input type="text" placeholder="" class="input-field"/>
+        <input type="submit" value="Add" class="add-btn"/>
+    </header>
 
-        <div>
-          <div id="error">
+    <div>
+        <div class="error-message">
 
-          </div>
-          <ul id="list">
-
-          </ul>
         </div>
+        <ul class="list">
 
+        </ul>
     </div>
-    <script>
-      /*
-        Задание:
 
-          Написать скрипт, который будет добавлять введеный в инпут Receiver текст
-          в список list.
-          Если в списке больше 5 записей, убирать Event с кнопки AddToList.
-          Кнопке AddToList добавить disabled = true
+</div>
+<script>
+    /*
+      Задание:
 
-          После каждого ввода очищать значение инпута
+        Написать скрипт, который будет добавлять введеный в инпут Receiver текст
+        в список list.
+        Если в списке больше 5 записей, убирать Event с кнопки AddToList.
+        Кнопке AddToList добавить disabled = true
 
-          Используемые методы:
+        После каждого ввода очищать значение инпута
+    */
 
-          addEventListener
-          removeEventListener
+    let inputField = document.querySelector('.input-field');
+    let addBtn = document.querySelector('.add-btn');
+    let errorMessage = document.querySelector('.error-message');
+    let listElement = document.querySelector('.list');
+    let listArray = [];
 
-          document.getElementById
-          document.createElement
+    addBtn.addEventListener('click', addToList);
 
-          element.innerText
-          element.setAttribute
-          element.appendChild
+    function addToList() {
+        if (inputField.value) {
+            listArray.push(inputField.value);
+            createLi(inputField.value);
+            inputField.value = '';
+        }
+        if (listArray.length >= 5) {
+            addBtn.disabled = true;
+            addBtn.removeEventListener('click', addToList);
+            errorMessage.innerHTML = "<h3>Thx</h3>";
+        }
+    }
 
-          Получить значение инпута: Receiver.value [Receiver - это id]
+    function createLi(text) {
+        let li = document.createElement('li');
+        li.innerText = text;
+        listElement.append(li);
+    }
 
-      */
-
-      var ListCount = 0;
-
-    </script>
-  </body>
+</script>
+</body>
 
 
 </html>
