@@ -54,3 +54,31 @@ body{
   transform: rotate(390deg);
   transition: 0.5s;
 }
+
+.fade-in {
+  animation: fade-in 0.25s ease-in forwards;
+}
+
+.fade-out {
+  animation: fade-out 0.25s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+}
