@@ -1,51 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Forms Task 1</title>
-  <script>
-    /*
-      Задание:
-        Сделать валидацию формы:
-        1. Логин / Пароль не может быть пустым
-        2. Пароли должны совпадть
-        3. Пока не стоит что юзер согласен с лиц. соглашением - кнопка отправки не активна
+    <meta charset="UTF-8">
+    <title>Forms Task 1</title>
+    <script>
+        /*
+          Задание:
+            Сделать валидацию формы:
+            1. Логин / Пароль не может быть пустым
+            2. Пароли должны совпадть
+            3. Пока не стоит что юзер согласен с лиц. соглашением - кнопка отправки не активна
 
-        + бонус - то поле, которое не прошло валидацию подсвечивать красным.
-                - которое прошло - подсвечивать зеленым.
-    */
-  </script>
+            + бонус - то поле, которое не прошло валидацию подсвечивать красным.
+                    - которое прошло - подсвечивать зеленым.
+        */
+        document.addEventListener('DOMContentLoaded', () => {
+            const MyValidateForm = document.forms.MyValidateForm;
+            const submitBtn = MyValidateForm.submit;
+            MyValidateForm.addEventListener('input', (event) => {
+                validation(event.target);
+            });
+
+            function validation(target) {
+                if (target.name === 'login') {
+                    if (target.value) {
+                        target.className = 'OK';
+                    } else {
+                        target.className = 'error';
+                    }
+                } else if (target.name === 'pas1' || target.name === 'pas2') {
+                    if (MyValidateForm.pas1.value === MyValidateForm.pas2.value) {
+                        MyValidateForm.pas1.className = 'OK';
+                        MyValidateForm.pas2.className = 'OK';
+                    } else {
+                        MyValidateForm.pas1.className = 'error';
+                        MyValidateForm.pas2.className = 'error';
+                    }
+                } else if (target.id === 'agree') {
+                    if(target.checked) {
+                        submitBtn.removeAttribute('disabled');
+                    } else {
+                        submitBtn.setAttribute('disabled', 'true');
+                    }
+                }
+            }
+        });
+    </script>
 </head>
 <body>
-  <form id="MyValidateForm">
-    <input type="text" name='login' placeholder="Ваш логин" />
-    <input type="password" name='pas1' placeholder="Ваш пароль" />
-    <input type="password" name='pas2' placeholder="Повторите пароль" />
+<form id="MyValidateForm">
+    <input type="text" name='login' placeholder="Ваш логин"/>
+    <input type="password" name='pas1' placeholder="Ваш пароль"/>
+    <input type="password" name='pas2' placeholder="Повторите пароль"/>
     <label for="agree">
-      <span>Вы согласны с лицензионым соглашением.</span>
-      <input type="checkbox" id="agree" />
+        <span>Вы согласны с лицензионым соглашением.</span>
+        <input type="checkbox" id="agree"/>
     </label>
     <input type="submit" id="submit" value="Отправить" disabled/>
-  </form>
+</form>
 
-  <style>
-    #MyValidateForm{
-      width: 350px;
-      display: flex;
-      flex-direction: column;
+<style>
+    #MyValidateForm {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
     }
 
-    #MyValidateForm input{
-      margin-bottom: 10px;
-      box-sizing: border-box;
-      padding: 10px 20px;
+    #MyValidateForm input {
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 10px 20px;
     }
-    .error{
+
+    .error {
         border: 1px solid red;
     }
-    .OK{
+
+    .OK {
         border: 1px solid green;
     }
-  </style>
+</style>
 </body>
 </html>
