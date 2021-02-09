@@ -1,39 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Form work1</title>
-  <script>
-    /*
-      Задание:
+    <meta charset="UTF-8">
+    <title>Form work1</title>
+    <script>
+        /*
+          Задание:
 
-      1. Сгенерировать список стран в Select countries
-      2. При выборе страны генерировать еще один Select со списком
-        городов этой страны и вывести этот селект в блок result
-      3. При выборе города нужно случайно рандомить температуру от
-      -10 градусов до +40. Если температура
+          1. Сгенерировать список стран в Select countries
+          2. При выборе страны генерировать еще один Select со списком
+            городов этой страны и вывести этот селект в блок result
+          3. При выборе города нужно случайно рандомить температуру от
+          -10 градусов до +40. Если температура
 
-        -10 до 0 то 'Солнечно' 'Легкий снегопад' 'Сильный снегопад'
-        0 до 30 то  'Солнечно' 'Дождь' 'Ветер' 'Сильный дождь'
-        30 до 40 то 'Солнечно' 'Засуха' 'Ветер'
+            -10 до 0 то 'Солнечно' 'Легкий снегопад' 'Сильный снегопад'
+            0 до 30 то  'Солнечно' 'Дождь' 'Ветер' 'Сильный дождь'
+            30 до 40 то 'Солнечно' 'Засуха' 'Ветер'
 
-      4. Вывести сообщение на страничку
-        {Country}. В {City} {Weather} {Temperature} градусов.
-        Ukraine. В Kyiv Солнечно -10 градусов
+          4. Вывести сообщение на страничку
+            {Country}. В {City} {Weather} {Temperature} градусов.
+            Ukraine. В Kyiv Солнечно -10 градусов
 
-        + бонус добавить красивые картинки с погодой
-    */
-    window.addEventListener("load", function () {
-      var countries = ['Ukraine', 'Poland', 'USA'];
-      var ukraineCity = ['Kyiv', 'Lviv', 'Odesa', 'Charkiv'];
-      var polandCity = ['Warszawa', 'Poznan', 'Krakow', 'Katowice'];
-      var usaCity = ['New York', 'Los Angeles', 'Las Vegas', 'Chicago'];
-    });
-  </script>
+            + бонус добавить красивые картинки с погодой
+        */
+        window.addEventListener("load", function () {
+            const Weather = {
+                elements: {
+                    selectCountry: null,
+                    selectCity: null,
+                    result: null,
+                },
+                data: {
+                    country: null,
+                    city: null,
+                    weather: null,
+                    temperature: null,
+                },
+                countries: ['Ukraine', 'Poland', 'USA'],
+                uaCities: ['Kyiv', 'Lviv', 'Odesa', 'Charkiv'],
+                polCities: ['Warszawa', 'Poznan', 'Krakow', 'Katowice'],
+                usaCities: ['New York', 'Los Angeles', 'Las Vegas', 'Chicago'],
+                weatherRange: {
+                    low: ['Солнечно', 'Легкий снегопад', 'Сильный снегопад'],
+                    medium: ['Солнечно', 'Дождь', 'Ветер', 'Сильный дождь'],
+                    high: ['Солнечно', 'Засуха', 'Ветер'],
+                },
+
+                init() {
+                    this.elements.result = document.querySelector('#result');
+                    this.elements.selectCountry = document.querySelector('#countries');
+                    this.elements.selectCity = document.createElement('select');
+                    this.setupCountries();
+                },
+
+                setupCountries() {
+                    let defaultSelection = new Option('Select Country', null, true, true);
+                    defaultSelection.disabled = true;
+                    this.elements.selectCountry.appendChild(defaultSelection);
+                    this.countries.forEach((country) => {
+                        let newSelection = new Option(country);
+                        this.elements.selectCountry.appendChild(newSelection);
+                    });
+                    this.watchCountry();
+                },
+
+                watchCountry() {
+                    let component = this;
+                    this.elements.selectCountry.addEventListener('change', (event) => {
+                        component.data.country = event.target.options[event.target.selectedIndex].text;
+                        component.setupCities();
+                    });
+                },
+
+                setupCities() {
+                    this.elements.selectCity.innerHTML = '';
+                    let cities = [];
+                    let defaultSelection = new Option('Select City', null, true, true);
+                    defaultSelection.disabled = true;
+                    this.elements.selectCity.appendChild(defaultSelection);
+                    if (this.data.country === 'Ukraine') {
+                        cities = this.uaCities;
+                    } else if (this.data.country === 'Poland') {
+                        cities = this.polCities;
+                    } else if (this.data.country === 'USA') {
+                        cities = this.usaCities;
+                    }
+                    cities.forEach((city) => {
+                        let newSelection = new Option(city);
+                        this.elements.selectCity.appendChild(newSelection);
+                    });
+                    document.body.insertBefore(this.elements.selectCity, this.elements.result);
+                    this.watchCity();
+                },
+
+                watchCity() {
+                    let component = this;
+                    this.elements.selectCity.addEventListener('change', (event) => {
+                        component.data.city = event.target.options[event.target.selectedIndex].text;
+                        component.createMessage();
+                    });
+                },
+
+                createMessage() {
+                    this.data.temperature = this.getRandValue(-10, 40);
+                    this.data.weather = this.getWeather();
+                    this.elements.result.innerHTML = `${this.data.country}. В ${this.data.city} ${this.data.weather} ${this.data.temperature} градусов.`;
+                },
+
+                getWeather() {
+                    let weather;
+                    if (this.data.temperature <= 0) {
+                        weather = this.weatherRange.low[this.getRandValue(0, this.weatherRange.low.length - 1)];
+                    } else if (0 < this.data.temperature < 30) {
+                        weather = this.weatherRange.medium[this.getRandValue(0, this.weatherRange.medium.length - 1)];
+                    } else {
+                        weather = this.weatherRange.high[this.getRandValue(0, this.weatherRange.high.length - 1)];
+                    }
+                    return weather;
+                },
+
+                getRandValue(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+            }
+
+            Weather.init();
+        });
+    </script>
 </head>
 <body>
-  <select id="countries"></select>
-  <div id="result"></div>
-  
+<select id="countries"></select>
+<div id="result"></div>
+
 </body>
 </html>
