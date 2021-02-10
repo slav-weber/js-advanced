@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_4/Homeworks/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_4/Homeworks/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Classwork/task1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Classwork/task2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Classwork/task3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Classwork/task4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/task1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Materials/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Materials/js/1.objects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Materials/js/2.context.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Materials/js/3.bind.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Materials/js/4.constructor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Materials/js/5.prototype_base.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/Homeworks/Task1.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/Homeworks/Task1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +55,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_5" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -86,6 +94,8 @@
       <workItem from="1612443078188" duration="193000" />
       <workItem from="1612803704608" duration="8535000" />
       <workItem from="1612852820421" duration="18751000" />
+      <workItem from="1612957469967" duration="74000" />
+      <workItem from="1612976343285" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -234,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612869102964</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add files lesson_4, homework">
+      <created>1612957488143</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1612957488143</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +306,7 @@
     <MESSAGE value="Add files lesson_4, classwork 2" />
     <MESSAGE value="Add files lesson_4, classwork 3" />
     <MESSAGE value="Add files lesson_4, classwork 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add files lesson_4, classwork 4" />
+    <MESSAGE value="Add files lesson_4, homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files lesson_4, homework" />
   </component>
 </project>
