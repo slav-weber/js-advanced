@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Динамическое подключение скриптов. Вывод в консоль.</h1>
+<button>task1</button>
+<button>task2</button>
+<button>task3</button>
+<button>task4</button>
+<script>
+    let buttons = document.querySelectorAll('button');
+    buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            if(document.querySelector('.js')) document.querySelector('.js').remove();
+            let script = document.createElement('script');
+            script.classList.add('js');
+            script.src = `task${index + 1}.js`;
+            document.body.append(script);
+        });
+    })
+</script>
+</body>
+</html>

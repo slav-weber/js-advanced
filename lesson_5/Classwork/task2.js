@@ -1,3 +1,6 @@
+
+console.log('script 2 included');
+
 /*
 
     Задание 2.

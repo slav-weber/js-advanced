@@ -1,3 +1,5 @@
+console.log('script 4 included');
+
 /*
 
   Задание "Шифр цезаря":

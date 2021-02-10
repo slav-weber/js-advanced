@@ -1,3 +1,5 @@
+console.log('script 3 included');
+
 /*
 
     Задание 3:
