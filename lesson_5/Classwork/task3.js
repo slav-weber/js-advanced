@@ -1,3 +1,5 @@
+"use strict"
+
 console.log('script 3 included');
 
 /*
@@ -24,3 +26,26 @@ console.log('script 3 included');
       /* ... делать что-то с obj[key] ...
     // }
 */
+
+function Dog(name, breed) {
+    // 1, 2
+    this.name = name;
+    this.breed = breed;
+    this.status = 'stands';
+
+    // 3
+    this.changeStatus = (status) => {
+        this.status = status;
+        console.log(`New status for ${this.name} is ${this.status}`);
+    };
+    // 4
+    this.showAllProps = () => {
+        for (let key in this) {
+            console.log( key, this[key] );
+        }
+};
+}
+
+let flaffyDog = new Dog('Flaffy', 'cocker');
+flaffyDog.changeStatus('sleeping');
+flaffyDog.showAllProps();
