@@ -70,5 +70,7 @@ function decrypt(step, word) {
     return result;
 }
 
-// let encryptedWord = encrypt('kitty', 5);
-// let decryptedWord = decrypt(encryptedWord, 5);
+let encryptedWord = encrypt('kitty', 5);
+let decryptedWord = decrypt(encryptedWord, 5);
+
+/** Не понял задачу **/
