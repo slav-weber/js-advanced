@@ -1,3 +1,5 @@
+"use strict"
+
 console.log('script 4 included');
 
 /*
@@ -33,3 +35,40 @@ console.log('script 4 included');
       String.fromCharCode(189, 43, 190, 61) // ½+¾
 
 */
+
+const AbcEn = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+function encrypt(step, word) {
+    let oldWord = word;
+    let result = [];
+    let wordLetters = word.split('');
+    wordLetters.forEach((letter) => {
+        let letterIndex = AbcEn.indexOf(letter);
+        letterIndex += step;
+        if(letterIndex > AbcEn.length - 1) letterIndex = letterIndex - AbcEn.length;
+        letter = AbcEn[letterIndex];
+        result.push(letter);
+    });
+    result = result.join('');
+    console.log(`Word ${oldWord} encrypted as ${result}`);
+    return result;
+};
+
+function decrypt(step, word) {
+    let oldWord = word;
+    let result = [];
+    let wordLetters = word.split('');
+    wordLetters.forEach((letter) => {
+        let letterIndex = AbcEn.indexOf(letter);
+        letterIndex -= step;
+        if(letterIndex < 0) letterIndex = letterIndex + AbcEn.length;
+        letter = AbcEn[letterIndex];
+        result.push(letter);
+    });
+    result = result.join('');
+    console.log(`Word ${oldWord} decrypted as ${result}`);
+    return result;
+}
+
+// let encryptedWord = encrypt('kitty', 5);
+// let decryptedWord = decrypt(encryptedWord, 5);
