@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_5/Classwork/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task1.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task1.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task3.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task3.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task4.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task4.js" afterDir="false" />
@@ -63,6 +61,16 @@
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="task2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/lesson_5/Classwork/task2.js" working-dir="$PROJECT_DIR$/lesson_5/Classwork">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.task2.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -90,7 +98,9 @@
       <workItem from="1612803704608" duration="8535000" />
       <workItem from="1612852820421" duration="18751000" />
       <workItem from="1612957469967" duration="74000" />
-      <workItem from="1612976343285" duration="3793000" />
+      <workItem from="1612976343285" duration="4418000" />
+      <workItem from="1613026105591" duration="1193000" />
+      <workItem from="1613119950582" duration="8413000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -260,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612976752550</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Lesson 5, create index.html for classwork">
+      <created>1612987119766</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612987119766</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Lesson 5, classwork 1">
+      <created>1612987138960</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612987138960</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,8 +317,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Init" />
-    <MESSAGE value="Classwork, task0" />
     <MESSAGE value="Classwork, task1" />
     <MESSAGE value="Classwork, task2" />
     <MESSAGE value="Classwork, task3" />
@@ -318,6 +340,8 @@
     <MESSAGE value="Add files lesson_4, homework" />
     <MESSAGE value="Add files lesson_5" />
     <MESSAGE value="Update .gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update .gitignore" />
+    <MESSAGE value="Lesson 5, create index.html for classwork" />
+    <MESSAGE value="Lesson 5, classwork 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5, classwork 1" />
   </component>
 </project>

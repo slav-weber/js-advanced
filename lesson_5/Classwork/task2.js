@@ -1,3 +1,4 @@
+"use strict"
 
 console.log('script 2 included');
 
@@ -19,13 +20,24 @@ console.log('script 2 included');
     обьект с настройками передаем через .apply();
 
 */
-  let colors = {
-    background: 'purple',
-    color: 'white'
-  }
 
-  // fucntion myCall( color ){
-  //   document.body.style.background = this.background;
-  //   document.body.style.color = color;
-  // }
-  // myCall.call( colors, 'red' );
+let colors = {
+    background: 'purple',
+    color: 'white',
+}
+
+function func(color, text) {
+    document.body.style.background = this.background;
+    document.body.style.color = color;
+    document.querySelector('h1').innerText = text;
+}
+
+// 1.1
+func.call(colors, 'red');
+
+// 1.2
+let bFunc = func.bind(colors);
+bFunc('green');
+
+// 1.3
+func.apply(colors, ['grey', 'hello kitty']);
