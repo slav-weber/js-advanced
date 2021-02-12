@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
+    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="Lesson 5, classwork 4">
+      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/default.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task2.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task3.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_5/Classwork/task4.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Classwork/task4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_5/Homework/task1.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Homework/task1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,12 +48,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_5" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_5/Homework" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5\Homework" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_2" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1\homework" />
@@ -100,7 +102,7 @@
       <workItem from="1612957469967" duration="74000" />
       <workItem from="1612976343285" duration="4418000" />
       <workItem from="1613026105591" duration="1193000" />
-      <workItem from="1613119950582" duration="8413000" />
+      <workItem from="1613119950582" duration="11050000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -284,7 +286,35 @@
       <option name="project" value="LOCAL" />
       <updated>1612987138960</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Lesson 5, classwork 2">
+      <created>1613128996982</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1613128996982</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Lesson 5, classwork 3">
+      <created>1613129004382</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1613129004382</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Lesson 5, classwork 4">
+      <created>1613129010527</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1613129010528</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Lesson 5, classwork 4">
+      <created>1613129095194</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1613129095194</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,9 +347,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Classwork, task1" />
-    <MESSAGE value="Classwork, task2" />
-    <MESSAGE value="Classwork, task3" />
     <MESSAGE value="Structure changes" />
     <MESSAGE value="Project refactor" />
     <MESSAGE value="Update workspace.xml" />
@@ -342,6 +369,9 @@
     <MESSAGE value="Update .gitignore" />
     <MESSAGE value="Lesson 5, create index.html for classwork" />
     <MESSAGE value="Lesson 5, classwork 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5, classwork 1" />
+    <MESSAGE value="Lesson 5, classwork 2" />
+    <MESSAGE value="Lesson 5, classwork 3" />
+    <MESSAGE value="Lesson 5, classwork 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5, classwork 4" />
   </component>
 </project>

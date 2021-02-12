@@ -1,0 +1,33 @@
+body > div {
+    position: relative;
+    border: 2px solid darkgray;
+    margin-bottom: 15px;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+div > div, div > button {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div > div:nth-of-type(1) {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+div > div:nth-of-type(2) {
+    font-style: italic;
+}
+
+button {
+    position: absolute;
+    width: 120px;
+    bottom: 0;
+    left: 120px;
+}
