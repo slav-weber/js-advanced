@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="Lesson 5, classwork 4">
-      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/default.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_5/Homework/style.css" afterDir="false" />
+    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_5/Homework/task1.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_5/Homework/task1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +98,8 @@
       <workItem from="1612957469967" duration="74000" />
       <workItem from="1612976343285" duration="4418000" />
       <workItem from="1613026105591" duration="1193000" />
-      <workItem from="1613119950582" duration="11050000" />
+      <workItem from="1613119950582" duration="11283000" />
+      <workItem from="1613407644255" duration="991000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -314,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613129095194</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Lesson 5, homework">
+      <created>1613131836593</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1613131836593</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,7 +351,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Structure changes" />
     <MESSAGE value="Project refactor" />
     <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Prepare homework files" />
@@ -372,6 +375,7 @@
     <MESSAGE value="Lesson 5, classwork 2" />
     <MESSAGE value="Lesson 5, classwork 3" />
     <MESSAGE value="Lesson 5, classwork 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5, classwork 4" />
+    <MESSAGE value="Lesson 5, homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5, homework" />
   </component>
 </project>
