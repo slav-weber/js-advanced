@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_6/Classwork/1.ShowWeekDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_6/Classwork/1.ShowWeekDay.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +45,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_5/Homework" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_6" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_6" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5\Homework" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_2" />
@@ -99,7 +101,7 @@
       <workItem from="1612976343285" duration="4418000" />
       <workItem from="1613026105591" duration="1193000" />
       <workItem from="1613119950582" duration="11283000" />
-      <workItem from="1613407644255" duration="991000" />
+      <workItem from="1613407644255" duration="2346000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -318,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613131836593</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Lesson 6, add all files">
+      <created>1613408919131</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1613408919131</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +360,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Project refactor" />
     <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Prepare homework files" />
     <MESSAGE value="Lesson 1, homework" />
@@ -376,6 +384,7 @@
     <MESSAGE value="Lesson 5, classwork 3" />
     <MESSAGE value="Lesson 5, classwork 4" />
     <MESSAGE value="Lesson 5, homework" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 5, homework" />
+    <MESSAGE value="Lesson 6, add all files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6, add all files" />
   </component>
 </project>

@@ -17,6 +17,10 @@
             День нужно возвратить в div#result в текстовом формате т.е понедельник, вторник, суббота и т.д
           */
 
+          document.querySelector('#ShowDayButton').addEventListener('click', (event) => {
+              document.querySelector('#result').innerText = new Date(event.target.closest('header').querySelector('#MyDateSelector').value).toLocaleString("default", { weekday: "long" });
+          })
+
       </script>
 </body>
 </html>
