@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_6/Classwork/1.ShowWeekDay.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_6/Classwork/1.ShowWeekDay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_6/Classwork/2.Timer.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_6/Classwork/2.Timer.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +101,7 @@
       <workItem from="1612976343285" duration="4418000" />
       <workItem from="1613026105591" duration="1193000" />
       <workItem from="1613119950582" duration="11283000" />
-      <workItem from="1613407644255" duration="2346000" />
+      <workItem from="1613407644255" duration="5193000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -327,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613408919131</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Lesson 6, classwork 1">
+      <created>1613416541768</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1613416541768</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +367,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update workspace.xml" />
     <MESSAGE value="Prepare homework files" />
     <MESSAGE value="Lesson 1, homework" />
     <MESSAGE value="Lesson 2, classwork 1 &amp; 2" />
@@ -385,6 +391,7 @@
     <MESSAGE value="Lesson 5, classwork 4" />
     <MESSAGE value="Lesson 5, homework" />
     <MESSAGE value="Lesson 6, add all files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6, add all files" />
+    <MESSAGE value="Lesson 6, classwork 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 6, classwork 1" />
   </component>
 </project>

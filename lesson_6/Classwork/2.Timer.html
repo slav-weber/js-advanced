@@ -5,19 +5,124 @@
     <title>Homework</title>
 </head>
 <body>
-      <!--
-        Создайте счетчик секунд, который начинает отчет с 1 и заканчивается на 30,
-        также добавьте кнопки который останавливают отчет, и запускают его заново и добавьте кнопку обнуляющую отчет.
-        Также попробуйте изменить код так чтобы отчет начиналься с 30 и заканчивалься на 1.
+<!--
+  Создайте счетчик секунд, который начинает отчет с 1 и заканчивается на 30,
+  также добавьте кнопки который останавливают отчет, и запускают его заново и добавьте кнопку обнуляющую отчет.
+  Также попробуйте изменить код так чтобы отчет начиналься с 30 и заканчивалься на 1.
 
-       + бонус: Сделать так что бы на каждый тик (1с/2c) менялся цвет фона. Можно на основе генератора случайного цвета с предудущих уроков.
-       + бонус: Сделать визуализацию стрелки которая идет по кругу
-            document.getElementById("myDIV").style.transform = "rotate(7deg)";
+ + бонус: Сделать так что бы на каждый тик (1с/2c) менялся цвет фона. Можно на основе генератора случайного цвета с предудущих уроков.
+ + бонус: Сделать визуализацию стрелки которая идет по кругу
+      document.getElementById("myDIV").style.transform = "rotate(7deg)";
 
-       + бонус: Сделать кнопки которые выбирают режим в котором идет отсчет - обычный от 0 до 30 или реверсивный от 30 до 0
-      -->
-      <script>
+ + бонус: Сделать кнопки которые выбирают режим в котором идет отсчет - обычный от 0 до 30 или реверсивный от 30 до 0
+-->
+<script>
+    const Timer = {
+        start: 0,
+        end: 5,
+        reverse: false,
+        timer: null,
+        time: 0,
+        interval: 1000,
+        elements: {
+            start: document.createElement('button'),
+            stop: document.createElement('button'),
+            reset: document.createElement('button'),
+            result: document.createElement('div'),
+            reverse: document.createElement('button'),
+        },
+        default: {
+            standard: {
+                start: 0,
+                end: 5,
+            },
+            reversed: {
+                start: 5,
+                end: 0,
+            }
+        },
 
-      </script>
+        init() {
+            console.log('timer init');
+            this.createTimer();
+        },
+
+        createTimer() {
+            this.elements.start.innerText = 'Start';
+            this.elements.stop.innerText = 'Stop';
+            this.elements.reset.innerText = 'Reset';
+            this.elements.result.innerText = 'Result';
+            this.elements.reverse.innerText = 'Reverse';
+
+            this.elements.start.addEventListener('click', _ => {
+                if (!this.timer) this.startTimer();
+            });
+
+            this.elements.stop.addEventListener('click', _ => {
+                if (this.timer) this.stopTimer();
+            });
+
+            this.elements.reset.addEventListener('click', _ => {
+                this.resetTimer();
+            });
+
+            this.elements.reverse.addEventListener('click', _ => {
+                this.reverseTimer();
+            });
+
+            document.body.append(this.elements.start);
+            document.body.append(this.elements.stop);
+            document.body.append(this.elements.reset);
+            document.body.append(this.elements.result);
+            document.body.append(this.elements.reverse);
+        },
+
+        startTimer() {
+            this.updateTime();
+            this.timer = setInterval(_ => {
+                if(!this.reverse) {
+                    this.time >= this.end ? this.stopTimer() : this.time++;
+                } else {
+                    this.time <= this.end ? this.stopTimer() : this.time--;
+                }
+                this.updateTime();
+            }, this.interval);
+        },
+
+        stopTimer() {
+            clearInterval(this.timer);
+            this.timer = null;
+        },
+
+        resetTimer() {
+            console.log('reset');
+            if (this.timer) this.stopTimer();
+            if (!this.reverse) {
+                console.log('rev false')
+                this.start = this.default.standard.start;
+                this.time = 0;
+                this.end = this.default.standard.end;
+            } else {
+                console.log('rev true')
+                this.start = this.default.reversed.start;
+                this.time = this.default.reversed.start;
+                this.end = this.default.reversed.end;
+            }
+
+            this.startTimer();
+        },
+
+        reverseTimer() {
+            this.reverse = !this.reverse;
+            this.resetTimer();
+        },
+
+        updateTime() {
+            this.elements.result.innerText = this.time;
+        }
+    }
+    Timer.init();
+
+</script>
 </body>
 </html>
