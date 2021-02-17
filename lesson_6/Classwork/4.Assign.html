@@ -5,100 +5,151 @@
     <title>Classwork</title>
 
     <script>
-    /*
-      Задание:
-        1. Используя интерфейс который есть на страничке, написать визуальный
-        конструктор обектов используя значение key-value, которые вводятся в
-        соответствующие поля в форме.
+        /*
+          Задание:
+            1. Используя интерфейс который есть на страничке, написать визуальный
+            конструктор обектов используя значение key-value, которые вводятся в
+            соответствующие поля в форме.
 
-        2. Каждый созданый обьект выводить в тег code после добавления каждого
-        нового поля. Т.е мы должны визуально видить в каком состоянии наши обьекты
-        сейчас
+            2. Каждый созданый обьект выводить в тег code после добавления каждого
+            нового поля. Т.е мы должны визуально видить в каком состоянии наши обьекты
+            сейчас
 
-        3. По нажатию кнопки Combine Objects! два обьекта должны обьедениться
-        используя метод Object.assing или spread operator и вывестись на стринчку.
+            3. По нажатию кнопки Combine Objects! два обьекта должны обьедениться
+            используя метод Object.assing или spread operator и вывестись на стринчку.
 
-        * Изменять HTML можно.
+            * Изменять HTML можно.
 
-    */
+        */
+
+        window.addEventListener('DOMContentLoaded', () => {
+            let objectsArray = []
+            let objectsSumObject = {};
+
+            const ObjForms = document.querySelectorAll('.ObjForm');
+            const ResultBlock = document.querySelector('.resultBlock');
+            const ResultObject = ResultBlock.querySelector('#result');
+            const CombineBtn = ResultBlock.querySelector('button');
+
+            ObjForms.forEach((ObjForm, index) => {
+                let inputKeyNode = ObjForm.querySelector('[name="key"]');
+                let inputValueNode = ObjForm.querySelector('[name="value"]');
+                let submitBtn = ObjForm.querySelector('button');
+                let resultElement = ObjForm.closest('.assigned').querySelector('.createResult');
+
+                ObjForm.addEventListener('click', event => {
+                    if (event.target === submitBtn) {
+                        event.preventDefault();
+                        let inputKey = inputKeyNode.value;
+                        let inputValue = inputValueNode.value;
+                        if (!objectsArray[index]) {
+                            objectsArray[index] = {
+                                [inputKey]: inputValue
+                            };
+                        } else {
+                            objectsArray[index][inputKey] = inputValue;
+                        }
+                        UpdateObjectHtml(objectsArray[index], resultElement);
+                        inputValueNode.value = '';
+                        inputKeyNode.value = '';
+                    }
+                })
+            });
+
+            CombineBtn.addEventListener('click', (event) => {
+                event.preventDefault();
+                objectsSumObject = {...objectsArray[0], ...objectsArray[1]};
+                UpdateObjectHtml(objectsSumObject, ResultObject);
+            })
+
+            const UpdateObjectHtml = (object, resultElement) => {
+                resultElement.innerHTML = '{<br>';
+                for (let prop in object) {
+                    resultElement.innerHTML += `${prop}:${object[prop]}<br>`;
+                }
+                resultElement.innerHTML += '}';
+            }
+        });
     </script>
 </head>
 <body>
-  <div class="wrap">
-      <div class="assigned">
+<div class="wrap">
+    <div class="assigned">
         <form class="ObjForm">
             <input name="key" placeholder="Enter your key"/>
             <input name="value" placeholder="Enter your value"/>
             <button type="submit">Send</button>
         </form>
         <div class="createResult">
-          <header>
-            Created Object
-          </header>
-          <div class="createdObj">
-            <code>
-              {
-                id:123,
-                b:'test',
-                demo:'test2'
-              }
-            </code>
-          </div>
+            <header>
+                Created Object
+            </header>
+            <div class="createdObj">
+                <code>
+                    {
+                    id:123,
+                    b:'test',
+                    demo:'test2'
+                    }
+                </code>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <div class="assigned">
+    <div class="assigned">
         <form class="ObjForm">
             <input name="key" placeholder="Enter your key"/>
             <input name="value" placeholder="Enter your value"/>
             <button type="submit">Send</button>
-          </form>
-          <div class="createResult">
+        </form>
+        <div class="createResult">
             <header>
-              Created Object
+                Created Object
             </header>
             <div class="createdObj">
-              <code>
-                {
-                  id:123,
-                  b:'test',
-                  demo:'test2'
-                }
-              </code>
+                <code>
+                    {
+                    id:123,
+                    b:'test',
+                    demo:'test2'
+                    }
+                </code>
             </div>
-          </div>
-      </div>
+        </div>
     </div>
-    <div class="resultBlock">
-       <button>Combine Objects!</button>
-      <h3> Result: </h3>
-      <div id="result"></div>
-    </div>
+</div>
+<div class="resultBlock">
+    <button>Combine Objects!</button>
+    <h3> Result: </h3>
+    <div id="result"></div>
+</div>
 
-      <script>
+<script>
 
-      </script>
-      <style>
-        .wrap{
-          width: 800px;
-          display: flex;
-        }
-        .ObjForm,
-        .resultBlock{
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          box-sizing: border-box;
-          padding: 10px 20px;
-        }
+</script>
+<style>
+    .wrap {
+        width: 800px;
+        display: flex;
+    }
 
-        .assigned{
-          width: 300px;
-          display: flex;
-        }
-        .createResult header{
-          font-weight: 700;
-        }
-      </style>
+    .ObjForm,
+    .resultBlock {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    .assigned {
+        width: 300px;
+        display: flex;
+    }
+
+    .createResult header {
+        font-weight: 700;
+    }
+</style>
 </body>
 </html>
