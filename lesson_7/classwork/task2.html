@@ -3,109 +3,259 @@
 <head>
     <meta charset="UTF-8">
     <title>Constructors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
+<div class="wrap">
     <header>
-      <form>
-        <label for="author">
-          <span>Author</span>
-          <select id="author" name="author">
-            <option value="Taras Shevchenko">Taras Shevchenko</option>
-            <option value="Ivan Franko">Ivan Franko</option>
-            <option value="Vasyl Stys">Vasyl Stys</option>
-            <option value="Oles Gonchar">Oles Gonchar</option>
-          </select>
-        </label>
+        <form>
+            <label for="author">
+                <span>Author</span>
+                <select id="author" name="author">
+                    <option value="Taras Shevchenko">Taras Shevchenko</option>
+                    <option value="Ivan Franko">Ivan Franko</option>
+                    <option value="Vasyl Stys">Vasyl Stys</option>
+                    <option value="Oles Gonchar">Oles Gonchar</option>
+                </select>
+            </label>
 
-        <label for="message">
-          <span>Message</span>
-          <textarea placeholder="Your Message" id="message"></textarea>
-        </label>
+            <label for="message">
+                <span>Message</span>
+                <textarea placeholder="Your Message" id="message"></textarea>
+            </label>
 
-        <button type="submit">Send Message</button>
-      </form>
+            <button type="submit">Send Message</button>
+        </form>
     </header>
-    
+
     <section>
-      <ul id="message_list">
-        <li>
-            <div class="message__date">
-              27/01/2018
-            </div>
-            <div class="message__author">
-              <b>Ivan Franko</b>
-            </div>
-            <div class="message__text">
-              Ночі безмірнії, ночі безсоннії...
-            </div>
-            <div class="message__controls">
-              <button class="_skipMessage">Skip</button>
-              <button class="_answerMessage">Answer</button>
-            </div>
-        </li>
-      </ul>
+        <ul id="message_list">
+            <li>
+                <div class="message__date">
+                    27/01/2018
+                </div>
+                <div class="message__author">
+                    <b>Ivan Franko</b>
+                </div>
+                <div class="message__text">
+                    Ночі безмірнії, ночі безсоннії...
+                </div>
+                <div class="message__controls">
+                    <button class="_skipMessage">Skip</button>
+                    <button class="_answerMessage">Answer</button>
+                </div>
+            </li>
+        </ul>
 
     </section>
 
-  </div>
+</div>
 
-  <script>
+<script>
 
-  /*
-    Задание на классы.
+    /*
+      Задание на классы.
 
-    1. Создать пустой массив messages, куда будут добавлятся все новосозданные сообщения
+      1. Создать пустой массив messages, куда будут добавлятся все новосозданные сообщения
 
-    2. Создать класс Message конструктор котрого состоит из следующих полей:
-      id, author, text, date, answers
+      2. Создать класс Message конструктор котрого состоит из следующих полей:
+        id, author, text, date, answers
 
-    У этого класса необходимо реализовать следующие методы:
-    SkipMessage() -> которое должно найти сообщение и удалить его из массива messages.
-    AnswerMessage()-> должно отрыть поле ввода, в который вы сможете ввести ответ
-    SendAnswer() -> метод который «отравляет» ответ, при этом обновляя поле ответа(answers) в вашем объекте с сообщением.
+      У этого класса необходимо реализовать следующие методы:
+      SkipMessage() -> которое должно найти сообщение и удалить его из массива messages.
+      AnswerMessage()-> должно отрыть поле ввода, в который вы сможете ввести ответ
+      SendAnswer() -> метод который «отравляет» ответ, при этом обновляя поле ответа(answers) в вашем объекте с сообщением.
 
-   3. Создать класс  Answer который наследуется от класса Message, но еще дополнительно будет иметь поле parentId
+     3. Создать класс  Answer который наследуется от класса Message, но еще дополнительно будет иметь поле parentId
 
-   var messages = [];
+     var messages = [];
 
-    message = { 
-      id: '',
-      author: '',
-      text: '',
-      date: '',
-      answers: [
-        {
-          id: '',
-          author: '',
-          text: '',
-          date: '',
-          parentId: '',
-          answers: ''
+      message = {
+        id: '',
+        author: '',
+        text: '',
+        date: '',
+        answers: [
+          {
+            id: '',
+            author: '',
+            text: '',
+            date: '',
+            parentId: '',
+            answers: ''
+          }
+        ]
+      }
+
+      Подсказка:
+        в метод SendAnswer нужно передать обьект класса Answer который наследуется от класса Message
+        После создания, сообщение добавляется в массив messages со всеми сообщениями.
+        Для вывода на екран необходимо написать дополнительный метод  Render()
+        Все данные берутся с формы.
+        Количество методов может быть больше чем указано в задании, если появится необходимость для выделения логики в отдельные методы, главное реализовать те что есть в задании
+
+      _ _ _
+
+      Задание можно разделить на две части:
+        1. Создание самого сообщения:
+          id->выдаётся автоматом
+          Author-> селект с выбором автора
+          Text -> текст сообщения
+          date -> автоматически в момент создания
+
+        2. Ответ на сообщение
+
+    */
+    let messagesArray = [];
+
+    class Message {
+        constructor(author, text, date) {
+            this.id = this.getRandomId();
+            this.author = author;
+            this.text = text;
+            this.date = date;
+            this.answers = [];
+            this.messageElement = document.createElement('li');
+
+            this.Init();
         }
-      ]
+
+        Init() {
+            this.InitEvents();
+            this.GenerateHtml();
+            this.Render();
+        }
+
+        SkipMessage() {
+            this.messageElement.remove();
+        }
+
+        AnswerMessage() {
+            this.messageElement.querySelector('.message__answer_form').classList.toggle('hidden');
+        }
+
+        SendAnswer() {
+            // debugger;
+            let answer = this.messageElement.querySelector('input').value;
+            let newAnswer = new Answer(authorField.value, answer, getCurrentDate(), this.id);
+            this.answers.push(newAnswer);
+        }
+
+        InitEvents() {
+            this.messageElement.addEventListener('click', (event) => {
+                event.target === event.currentTarget.querySelector('._skipMessage') ? this.SkipMessage() : '';
+                event.target === event.currentTarget.querySelector('._answerMessage') ? this.AnswerMessage() : '';
+                event.target === event.currentTarget.querySelector('._sendAnswer') ? this.SendAnswer() : '';
+            });
+        }
+
+        GenerateHtml() {
+            this.messageElement.innerHTML = `
+                <div class="message__date">
+                    ${this.date}
+                </div>
+                <div class="message__author">
+                    <b>${this.author}</b>
+                </div>
+                <div class="message__text">
+                    ${this.text}
+                </div>
+                <div class="message__controls">
+                    <button class="_skipMessage">Skip</button>
+                    <button class="_answerMessage">Answer</button>
+                </div>
+                <div class="message__answer_form">
+                    <input type="text" minlength="1">
+                    <button class="_sendAnswer">Send</button>
+                </div>
+                <ul class="message__answers"></ul>
+            `;
+        }
+
+        Render() {
+            document.querySelector('#message_list').append(this.messageElement);
+        }
+
+        getRandomId(min = 1000000000, max = 9999999999) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
     }
 
-    Подсказка: 
-      в метод SendAnswer нужно передать обьект класса Answer который наследуется от класса Message
-      После создания, сообщение добавляется в массив messages со всеми сообщениями.
-      Для вывода на екран необходимо написать дополнительный метод  Render()
-      Все данные берутся с формы.
-      Количество методов может быть больше чем указано в задании, если появится необходимость для выделения логики в отдельные методы, главное реализовать те что есть в задании
+    class Answer extends Message {
+        constructor(author, text, date, parentId) {
+            super(author, text, date);
+            this.parentId = parentId;
+            this.Init(); /** Todo: Запуск Init() метода происходит дважды, 1 раз в super, воторой раз из данного объекта **/
+        }
 
-    _ _ _
+        GenerateHtml() {
+            this.messageElement.innerHTML = `
+                <div class="answer__date">
+                    ${this.date}
+                </div>
+                <div class="answer__author">
+                    <b>${this.author}</b>
+                </div>
+                <div class="answer__text">
+                    ${this.text}
+                </div>
+            `;
+        }
 
-    Задание можно разделить на две части:
-      1. Создание самого сообщения:
-        id->выдаётся автоматом
-        Author-> селект с выбором автора
-        Text -> текст сообщения
-        date -> автоматически в момент создания      
+        Render() {
+            let parentMessageObject = messagesArray.find(message => {
+                return message.id === this.parentId;
+            });
+            if (!parentMessageObject) return;
+            let parentMessageElement = parentMessageObject.messageElement;
+            let answersElement = parentMessageElement.querySelector('.message__answers');
+            answersElement.append(this.messageElement);
+        }
+    }
 
-      2. Ответ на сообщение
 
-  */
+    let messageForm = document.querySelector('form');
+    let createMessageBtn = messageForm.querySelector('button');
+    let authorField = messageForm.querySelector('#author');
+    let messageField = messageForm.querySelector('#message');
+    createMessageBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        createMessage();
+    })
 
-  </script>
+    function createMessage() {
+        let author = authorField.value;
+        let message = messageField.value;
+        let date = getCurrentDate();
+        if (message.length > 0) {
+            let newMessage = new Message(author, message, date);
+            messagesArray.push(newMessage);
+            messageField.value = '';
+        }
+    }
+
+    function recreateMessagesFromHtml() {
+        let list = document.querySelector('#message_list');
+        let messages = list.querySelectorAll('li');
+        list.innerHTML = '';
+
+        messages.forEach((message, index) => {
+            let author = message.querySelector('.message__author > b').innerText;
+            let text = message.querySelector('.message__text').innerText;
+            let date = message.querySelector('.message__date').innerText;
+            messagesArray[index] = new Message(author, text, date);
+        });
+    }
+
+    function getCurrentDate() {
+        let date = new Date();
+        date = `${("0" + date.getDate()).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`;
+        return date;
+    }
+
+    recreateMessagesFromHtml();
+</script>
 </body>
 </html>
