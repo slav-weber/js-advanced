@@ -25,23 +25,54 @@
     - бонус, создать конструктор суперспособностей -> new Spell( name, spellFunc );
 */
 
-  class SuperDude {
-    
-  }
+class SuperDude {
+    constructor(name, abilities) {
+        this.name = name || 'Noname';
+        superPowers.forEach(superPower => {
+            this[superPower.name] = superPower.spell;
+        })
+    }
+}
 
-  let superPowers = [
-    { name:'Invisibility', spell: function(){ return `${this.name} hide from you`} },
-    { name:'superSpeed', spell: function(){ return `${this.name} running from you`} },
-    { name:'superSight', spell: function(){ return `${this.name} see you`} },
-    { name:'superFroze', spell: function(){ return `${this.name} will froze you`} },
-    { name:'superSkin',  spell: function(){ return `${this.name} skin is unbreakable`} },
-  ];
+let superPowers = [
+    {
+        name: 'Invisibility',
+        spell() {
+            return `${this.name} hide from you`
+        }
+    },
+    {
+        name: 'superSpeed',
+        spell() {
+            return `${this.name} running from you`
+        }
+    },
+    {
+        name: 'superSight',
+        spell() {
+            return `${this.name} see you`
+        }
+    },
+    {
+        name: 'superFroze',
+        spell() {
+            return `${this.name} will froze you`
+        }
+    },
+    {
+        name: 'superSkin',
+        spell() {
+            return `${this.name} skin is unbreakable`
+        }
+    },
+];
 
-  let Luther = new Dude('Luther', superPowers);
-      // Тестирование: Методы должны работать и выводить сообщение.
-      Luther.superSight();
-      Luther.superSpeed();
-      Luther.superFroze();
-      Luther.Invisibility();
-      Luther.superSkin();
+let Luther = new SuperDude('Luther', superPowers);
+console.log(Luther);
+// Тестирование: Методы должны работать и выводить сообщение.
+console.log(Luther.superSight());
+console.log(Luther.superSpeed());
+console.log(Luther.superFroze());
+console.log(Luther.Invisibility());
+console.log(Luther.superSkin());
 
