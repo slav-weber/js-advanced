@@ -7,22 +7,68 @@
     <title>Inheritance</title>
 </head>
 <body>
-    <!-- 
-         Реализовать наследование по примеру приведенном на картинку inheritance
-         
-         class Man должен иметь поля
-            name            
-            age
-            country
-        + методы с картинки
-        
-        Каждый метод должен выводить в консоле все поля + имя метода
-        WALK:
-            console.log(`Hi! My name is ${name}, and Im {age} years old. Im from ${country}, and I like to WALK a lot`)
-        
+<img src="inheritance.png" alt="">
+<!--
+     Реализовать наследование по примеру приведенном на картинку inheritance
 
+     class Man должен иметь поля
+        name
+        age
+        country
+    + методы с картинки
 
+    Каждый метод должен выводить в консоле все поля + имя метода
+    WALK:
+        console.log(`Hi! My name is ${name}, and Im {age} years old. Im from ${country}, and I like to WALK a lot`)
+ -->
+<script>
+    class Man {
+        constructor(name, age, country) {
+            this.name = name;
+            this.age = age;
+            this.country = country;
+        }
 
-     -->
+        Walk() {
+            console.log(this.name, 'Walk');
+        }
+
+        Eat() {
+            console.log(this.name, 'Eat');
+        }
+
+        Drink() {
+            console.log(this.name, 'Drink');
+        }
+    }
+
+    class Doctor extends Man {
+        constructor(name, age, country) {
+            super(name, age, country);
+        }
+
+        Cure() {
+            console.log(this.name, 'Cure');
+        }
+    }
+
+    class Soldier extends Man {
+        constructor(name, age, country) {
+            super(name, age, country);
+        }
+
+        Shoot() {
+            console.log(this.name, 'Shoot');
+        }
+    }
+
+    const Fred = new Man('Fred', 22, 'England');
+    const Tom = new Doctor('Tom', 34, 'Spain');
+    const Jack = new Soldier('Jack', 22, 'Poland');
+
+    Fred.Walk();
+    Tom.Drink();
+    Jack.Shoot();
+</script>
 </body>
 </html>
