@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<form class="to-json">
+  <input name="name" placeholder="name" value="testname"/>
+  <input name="age" placeholder="age" value="341"/>
+  <input name="password" placeholder="password" value="efgko3344"/>
+  <button>To JSON</button>
+</form>
+<hr>
+<form class="to-object">
+  <input type="text" name="text"/>
+  <button>To Object</button>
+</form>
+<script>
+/*
+  Задание:
+  Написать скрипт который:
+    1. Собирает данные с формы (3 разных полей), конвертирует их в json и выводит в консоль.
+  ->  2. Сделать отдельный инпут который выполняет JSON.parse(); на ту строку что вы туда ввели и выводит результат в консоль.
+*/
+let toJsonForm = document.querySelector('.to-json');
+let toObjectForm = document.querySelector('.to-object');
+let nameField = toJsonForm.querySelector('[name="name"]');
+let ageField = toJsonForm.querySelector('[name="age"]');
+let passwordField = toJsonForm.querySelector('[name="password"]');
+let textField = toObjectForm.querySelector('[name="text"]');
+
+toJsonForm.addEventListener('click', (event) => {
+  event.preventDefault();
+  if(event.target.localName === 'button') {
+    let object = {};
+    object[nameField.name] = nameField.value;
+    object[ageField.name] = ageField.value;
+    object[passwordField.name] = passwordField.value;
+    console.log('object => ', object);
+    console.log('JSON.stringify(object) => ', JSON.stringify(object));
+    textField.value = JSON.stringify(object);
+  }
+})
+
+toObjectForm.addEventListener('click', (event) => {
+  event.preventDefault();
+  if(event.target.localName === 'button') {
+    let jsonText = textField.value;
+    console.log('jsonText => ', jsonText);
+    console.log('JSON.parse(jsonText) => ', JSON.parse(jsonText));
+  }
+})
+</script>
+</body>
+</html>
+
+
+
