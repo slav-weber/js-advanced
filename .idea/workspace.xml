@@ -5,12 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_7/Hw/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_7/classwork/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/classWork/1_json.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/classWork/2_fetch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/classWork/3_async.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/callback_hell.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/images/cat8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/async-await.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/callbacks.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/fetch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/jsonData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/promises.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/renderImage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/public/js/xmlHttprequest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/questions/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/questions/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_8/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_7/Hw/classWork_defineProp.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_7/Hw/classWork_defineProp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_7/classwork/task2.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_7/classwork/task2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_7/classwork/task3.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_7/classwork/task3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,17 +72,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Lessons\JS-Advanced\js-advanced-github" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_6" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5\Homework" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_2" />
-      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1\homework" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1" />
@@ -116,7 +139,9 @@
       <workItem from="1613581597927" duration="7283000" />
       <workItem from="1613630538470" duration="19000" />
       <workItem from="1613631180103" duration="2330000" />
-      <workItem from="1613723615819" duration="9383000" />
+      <workItem from="1613723615819" duration="10284000" />
+      <workItem from="1613976136843" duration="1109000" />
+      <workItem from="1614013143979" duration="1669000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1611775171583</created>
@@ -384,7 +409,28 @@
       <option name="project" value="LOCAL" />
       <updated>1613589182633</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Lesson 7, classwork 2">
+      <created>1613733729204</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1613733729204</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Lesson 7, classwork 3">
+      <created>1613733738452</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1613733738452</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Lesson 7, homework">
+      <created>1613733747259</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1613733747259</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,9 +463,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Add lesson_3" />
-    <MESSAGE value="lesson_3, classwork 1" />
-    <MESSAGE value="lesson_3, classwork 2" />
     <MESSAGE value="lesson_3, classwork 3" />
     <MESSAGE value="Add files lesson_4" />
     <MESSAGE value="Add files lesson_4, classwork 1" />
@@ -442,6 +485,9 @@
     <MESSAGE value="Lesson 6, classwork 4" />
     <MESSAGE value="Lesson 7" />
     <MESSAGE value="Lesson 7, classwork 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 7, classwork 1" />
+    <MESSAGE value="Lesson 7, classwork 2" />
+    <MESSAGE value="Lesson 7, classwork 3" />
+    <MESSAGE value="Lesson 7, homework" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 7, homework" />
   </component>
 </project>
