@@ -6,11 +6,24 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
+<div id="result"></div>
 <script>
     /*
-
     Задание:
 
       Написать при помощи async-await скрипт, который:
@@ -25,8 +38,73 @@
       4.| CompName | 2000$   | button                    | button
 
       Данные о дате регистрации и адресс скрывать при выводе и показывать при клике.
-
   */
+    let resultElement = document.querySelector('#result');
+    getCompaniesList();
+
+    async function getCompaniesList() {
+        await fetch('http://www.json-generator.com/api/json/get/ceRHciXcVu?indent=2')
+            .then(res => res.json())
+            .then(companiesList => {
+                console.log(companiesList);
+                renderList(companiesList);
+            });
+    }
+
+    function renderList(companiesList) {
+        let tableElement = document.createElement('table');
+        let titlesElement = document.createElement('tr');
+        titlesElement.innerHTML = `
+            <th>
+                #
+            </th>
+            <th>
+                Balance
+            </th>
+            <th>
+                Registration Date
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Visibility
+            </th>
+        `
+        tableElement.append(titlesElement);
+        companiesList.forEach(company => {
+            let companyElement = document.createElement('tr');
+            companyElement.innerHTML = `
+                        <td>
+                            ${company._id}
+                        </td>
+                        <td>
+                            ${company.balance}
+                        </td>
+                        <td>
+                            <span>****</span><span class="hidden">${company.registered}</span>
+                        </td>
+                        <td>
+                            <span>****</span><span class="hidden">${company.address.country}, ${company.address.city}, ${company.address.street} ${company.address.house}</span>
+                        </td>
+                        <td>
+                            <button>Show/Hide</button>
+                        </td>
+                    `;
+            companyElement.addEventListener('click', (event) => {
+                if (event.target.localName === 'button') {
+                    console.log('hide/show');
+                    let spans = companyElement.querySelectorAll('span');
+                    spans.forEach(span => {
+                        span.classList.toggle('hidden');
+                    })
+                }
+            });
+            tableElement.append(companyElement);
+        });
+
+        resultElement.append(tableElement);
+    }
 </script>
 </body>
 </html>
