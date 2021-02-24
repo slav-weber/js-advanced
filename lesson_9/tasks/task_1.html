@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<button>Change Body BG Color</button>
+<script type="module" src="helpers.js"></script>
+<script type="module">
+    /*
+    Задание 1:
+    Написать скрипт, который по клику на кнопку рандомит цвет и записывает его в localStorage
+    После перезагрузки страницы, цвет должен сохранится.
+    */
+    import {getRandomColor} from "./helpers.js";
+
+    useSavedSettings();
+
+    let changeBodyBgColorBtn = document.querySelector('button');
+
+    changeBodyBgColorBtn.addEventListener('click', () => {
+        let randomColorHEX = getRandomColor();
+        window.localStorage.setItem('BodyBgColor', randomColorHEX)
+        changeBackgroundColor(randomColorHEX);
+    })
+
+    function changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+
+    function useSavedSettings() {
+        const BodyBackgroundColor = window.localStorage.getItem('BodyBgColor');
+        !!BodyBackgroundColor ? changeBackgroundColor(BodyBackgroundColor) : false;
+    }
+</script>
+</body>
+</html>
