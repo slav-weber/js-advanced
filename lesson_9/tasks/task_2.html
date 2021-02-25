@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<form class="login-form hidden">
+    <input type="text" name="login" placeholder="Login" value="Pinus" required>
+    <input type="password" name="password" placeholder="Password" value="thisIsMyPass" required>
+    <button>Send</button>
+   <div>
+       <p class="message"></p>
+   </div>
+</form>
+<div class="user-logged-in hidden">
+    <p class="message"></p>
+    <button class="exit">Exit</button>
+</div>
+<script type="module">
+    /*
+    Задание 2:
+    Написать форму логина (логин пароль), которая после отправки данных записывает их в localStorage.
+    Если в localStorage есть записть - На страниче вывести "Привет {username}", если нет - вывести окно
+    логина.
+
+    + бонус, сделать кнопку "выйти" которая удаляет запись из localStorage и снова показывает форму логина
+    + бонус сделать проверку логина и пароля на конкретную запись. Т.е. залогинит пользователя если
+    он введет только admin@example.com и пароль 12345678
+    */
+    import {LoginForm, LogoutElement} from './classes/Task_2.js';
+    if(window.localStorage.getItem('loginData')) {
+        const myLogoutElement = new LogoutElement();
+    } else {
+        const myLoginForm = new LoginForm();
+    }
+</script>
+</body>
+</html>

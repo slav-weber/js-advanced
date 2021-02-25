@@ -9,14 +9,13 @@
 </head>
 <body>
 <button>Change Body BG Color</button>
-<script type="module" src="helpers.js"></script>
 <script type="module">
     /*
     Задание 1:
     Написать скрипт, который по клику на кнопку рандомит цвет и записывает его в localStorage
     После перезагрузки страницы, цвет должен сохранится.
     */
-    import {getRandomColor} from "./helpers.js";
+    import {getRandomColor} from "./libs/helpers.js";
 
     useSavedSettings();
 

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<form class="add-new-post">
+    <div>
+        <input required type="text" name="title" placeholder="title" value="Spangi Bibo">
+    </div>
+    <div>
+        <textarea required type="text" name="about" placeholder="About?">This is example text</textarea>
+    </div>
+    <label>
+        Post is active <input type="checkbox" name="isActive" checked>
+    </label>
+    <div>
+        <button class="create-post">Create Post</button>
+    </div>
+</form>
+<button class="load-posts">Load Posts by API</button>
+<div class="posts">
+
+</div>
+<script type="module">
+    /*
+    Задание 3:
+    Написать класс Posts в котором есть данные:
+    _id
+    isActive,
+    title,
+    about,
+    likes,
+    created_at
+
+    У класса должен быть метод addLike и render.
+
+    Нужно сделать так чтобы:
+    - После добавления поста, данные о нем записываются в localStorage.
+    - После перезагрузки страницы, данные должны сохраниться.
+    - Можно было предзагрузить данные в класс из апи: http://www.json-generator.com/api/json/get/cgCRXqNTtu?indent=2
+
+*/
+    import {Post} from "./classes/Task_3.js";
+
+    let posts = [];
+    if (window.localStorage.getItem('posts')) {
+        posts = JSON.parse(window.localStorage.getItem('posts'));
+        initPosts(posts)
+    }
+
+    const LoadPostsByAPI = document.querySelector('.load-posts');
+
+    const PostForm = {
+        form: document.querySelector('.add-new-post'),
+        title: document.querySelector('.add-new-post [name="title"]'),
+        about: document.querySelector('.add-new-post [name="about"]'),
+        isActive: document.querySelector('.add-new-post [name="isActive"]'),
+        createPost: document.querySelector('.add-new-post .create-post'),
+    }
+
+    PostForm.createPost.addEventListener('click', (event) => {
+        event.preventDefault();
+        let postData = {
+            title: PostForm.title.value,
+            about: PostForm.about.value,
+            isActive: PostForm.isActive.checked,
+        }
+        posts.push(new Post(false, postData.title, postData.about, postData.isActive));
+        savePosts();
+    });
+
+    LoadPostsByAPI.addEventListener('click', async () => {
+        console.log('load posts by API');
+        let posts = await getPosts('http://www.json-generator.com/api/json/get/cgCRXqNTtu?indent=2');
+        createPosts(posts);
+        savePosts();
+    });
+
+    async function getPosts(url) {
+        console.log('get posts');
+        let promise = await fetch(url);
+        let response = await promise.json();
+        return response;
+    }
+
+    function createPosts(postsArray) {
+        console.log('create posts');
+        postsArray.forEach((post) => {
+            posts.push(new Post(post._id, post.title, post.about, post.isActive, false, post.created_at));
+        })
+    }
+
+    function initPosts(postsArray) {
+        console.log('init saved posts');
+        postsArray.forEach((post) => {
+            new Post(post._id, post.title, post.about, post.isActive, post.likes, post.created_at);
+        })
+    }
+
+    function savePosts() {
+        console.log('save posts', posts);
+        window.localStorage.removeItem('posts');
+        window.localStorage.setItem('posts', JSON.stringify(posts));
+    }
+</script>
+</body>
+</html>
