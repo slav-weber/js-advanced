@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form work1</title>
+    <script>
+        // взять todolist из предыдущих домашек и реализовать сохранение всех записей на "сервер" используя https://www.npmjs.com/package/json-server
+        // при перезагрузке страницы все сохраненные записи должны подтягиваться и отрисовавыться, при добалении записи она улетает на "серевер" и сохраняется
+
+        window.addEventListener("load", () => {
+            const IList = {
+                list: document.querySelector('#toDoList'),
+                createBtn: document.querySelector('#AddToDo'),
+                textField: document.querySelector('#newToDo'),
+                items: [],
+                init() {
+                    let component = this;
+                    this.createBtn.addEventListener('click', () => { // Create li
+                        this.createItem(component)
+                    });
+                    this.list.addEventListener('click', (event) => {
+                        if (event.target.localName === 'button') { // Remove li
+                            component.removeItem(event.target.closest('li').dataset.itemId);
+                        } else if (event.target.localName === 'input') { // Check li
+                            component.checkItem(event.target.closest('li').dataset.itemId, event.target.checked);
+                        }
+                    });
+                },
+                addItems(selector) {
+                    document.querySelectorAll(selector).forEach((item, index) => {
+                        this.items[index] = item;
+                    })
+                    this.updateList();
+                },
+                createItem(component) {
+                    if (!!component.textField.value) {
+                        let newItem = document.createElement('li');
+                        let itemCheckbox = document.createElement('input');
+                        let itemText = document.createElement('span');
+                        let itemRemove = document.createElement('button');
+                        newItem.classList.add('listItem');
+                        itemCheckbox.type = 'checkbox';
+                        itemCheckbox.classList.add('DoneCheckbox');
+                        itemText.classList.add('TodoText');
+                        itemText.innerHTML = this.textField.value;
+                        itemRemove.innerHTML = 'Remove';
+                        newItem.append(itemCheckbox);
+                        newItem.append(itemText);
+                        newItem.append(itemRemove);
+                        component.items.push(newItem);
+                        component.updateList();
+                        this.textField.value = '';
+                    }
+                },
+                updateList() {
+                    console.log('update');
+                    this.list.innerHTML = '';
+                    this.items.forEach((item, index) => {
+                        item.dataset.itemId = index;
+                        this.list.append(item);
+                    });
+                },
+                checkItem(itemId, status) {
+                    let itemCheckbox = this.items[itemId].querySelector('input');
+                    itemCheckbox.checked = status;
+                    this.items[itemId].classList.toggle('done');
+                    this.updateList();
+                },
+                removeItem(itemId) {
+                    this.items.splice(itemId, 1);
+                    this.updateList();
+                },
+            }
+
+            IList.init();
+        });
+    </script>
+</head>
+<body>
+<header>
+    <input id="newToDo" class="textInput"/>
+    <input id="AddToDo" class="addButton" type="button" value="Add"/>
+</header>
+<ul id="toDoList">
+
+</ul>
+
+<style>
+    .done {
+        text-decoration: line-through;
+    }
+
+    .textInput {
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    .addButton {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        background: #ffcc00;
+    }
+
+    .DoneCheckbox,
+    .TodoText {
+        margin-right: 5px;
+    }
+
+    button {
+        background: red;
+        color: #fff;
+        padding: 5px 10px;
+    }
+</style>
+</body>
+</html>
+
+
