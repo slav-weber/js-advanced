@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
+    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="Lesson 9, refactor structure of task 1-4">
+      <change afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/public/libs/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/tasks/task_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/tasks/task_4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/tasks/task_5.js" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/tasks/task_5/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_9/tasks/task_5/task_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/public/index.html" afterDir="false" />
     </list>
+    <list id="de5360a1-9ecd-439c-bc8c-474f91d55349" name="Lesson 9, refactor structure of task 1-4" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,24 +53,26 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_9/tasks/task_5/public" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\task_5\public" />
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_6" />
       <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5\Homework" />
-      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_5" />
-      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\libs" />
-      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks" />
-      <recent name="E:\Weber\Lessons\js-advanced-github\js" />
-      <recent name="E:\Lessons\JS-Advanced\js-advanced-github\lesson_1" />
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\task_5\public" />
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\task_4" />
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\task_3" />
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\task_2" />
+      <recent name="E:\Weber\Lessons\js-advanced-github\lesson_9\tasks\task_1" />
     </key>
   </component>
   <component name="RunManager">
@@ -79,6 +89,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="" />
+      <changelist id="de5360a1-9ecd-439c-bc8c-474f91d55349" name="Lesson 9, refactor structure of task 1-4" comment="" />
       <created>1611775106436</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -131,42 +142,8 @@
       <workItem from="1614258860216" duration="1473000" />
       <workItem from="1614261141350" duration="14000" />
       <workItem from="1614269709017" duration="97000" />
-      <workItem from="1614361803260" duration="2022000" />
-    </task>
-    <task id="LOCAL-00001" summary="Init">
-      <created>1611775171583</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1611775171583</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Classwork, task0">
-      <created>1611775993485</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1611775993485</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Classwork, task1">
-      <created>1611776607669</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1611776607669</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Classwork, task2">
-      <created>1611777243434</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1611777243434</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Classwork, task3">
-      <created>1611779096255</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1611779096255</updated>
+      <workItem from="1614361803260" duration="2129000" />
+      <workItem from="1614412517641" duration="4975000" />
     </task>
     <task id="LOCAL-00006" summary="Project refactor">
       <created>1611847460630</created>
@@ -476,7 +453,42 @@
       <option name="project" value="LOCAL" />
       <updated>1614269723394</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Lesson 9, task 4">
+      <created>1614363882977</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1614363882978</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Lesson 9, task 3">
+      <created>1614363948288</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1614363948288</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Lesson 9, task 5">
+      <created>1614363959903</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1614363959903</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Lesson 9, refactor structure of task 1-4">
+      <created>1614413604403</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1614413604403</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Lesson 9, refactor structure of task 1-5">
+      <created>1614413685974</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1614413685974</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +505,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/develop" />
+                        <option value="develop" />
                       </list>
                     </value>
                   </entry>
@@ -509,11 +521,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Update .gitignore" />
-    <MESSAGE value="Lesson 5, create index.html for classwork" />
-    <MESSAGE value="Lesson 5, classwork 1" />
-    <MESSAGE value="Lesson 5, classwork 2" />
-    <MESSAGE value="Lesson 5, classwork 3" />
     <MESSAGE value="Lesson 5, classwork 4" />
     <MESSAGE value="Lesson 5, homework" />
     <MESSAGE value="Lesson 6, add all files" />
@@ -534,6 +541,11 @@
     <MESSAGE value="Lesson 9" />
     <MESSAGE value="Lesson 9, task 1" />
     <MESSAGE value="Lesson 9, task 1, 2, 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9, task 1, 2, 3" />
+    <MESSAGE value="Lesson 9, task 4" />
+    <MESSAGE value="Lesson 9, task 3" />
+    <MESSAGE value="Lesson 9, task 5" />
+    <MESSAGE value="Lesson 9, refactor structure of task 1-4" />
+    <MESSAGE value="Lesson 9, refactor structure of task 1-5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9, refactor structure of task 1-5" />
   </component>
 </project>

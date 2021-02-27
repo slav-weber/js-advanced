@@ -1,24 +1,14 @@
 {
-  "posts": [
+  "ToDoList": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": 0,
+      "title": "Just do it",
+      "checked": true
     },
     {
-      "name": "acadsasdsd",
-      "age": "dadasdasdasdasd",
-      "id": 3
-    },
-    {
-      "name": "фывфыв",
-      "age": "фывфвфывфы",
+      "title": "ewrwe",
+      "checked": true,
       "id": 4
-    },
-    {
-      "name": "adasdas",
-      "age": "dasdasd",
-      "id": 5
     }
   ]
 }

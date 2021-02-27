@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Form work1</title>
-    <script>
+    <script type="module">
         // взять todolist из предыдущих домашек и реализовать сохранение всех записей на "сервер" используя https://www.npmjs.com/package/json-server
         // при перезагрузке страницы все сохраненные записи должны подтягиваться и отрисовавыться, при добалении записи она улетает на "серевер" и сохраняется
 
-        window.addEventListener("load", () => {
+        import {getData, postData, patchData, removeData} from './libs/helpers.js';
+
+        window.addEventListener("load", async () => {
             const IList = {
                 list: document.querySelector('#toDoList'),
                 createBtn: document.querySelector('#AddToDo'),
@@ -48,12 +50,35 @@
                         newItem.append(itemText);
                         newItem.append(itemRemove);
                         component.items.push(newItem);
+                        let newItemPostData = {
+                            title: this.textField.value,
+                            checked: false,
+                        }
+                        postData('http://localhost:3000/ToDoList', newItemPostData);
                         component.updateList();
                         this.textField.value = '';
                     }
                 },
+                renderItem(id, title, checked) {
+                    let newItem = document.createElement('li');
+                    let itemCheckbox = document.createElement('input');
+                    let itemText = document.createElement('span');
+                    let itemRemove = document.createElement('button');
+                    newItem.classList.add('listItem');
+                    itemCheckbox.type = 'checkbox';
+                    itemCheckbox.classList.add('DoneCheckbox');
+                    itemCheckbox.checked = checked;
+                    itemText.classList.add('TodoText');
+                    itemText.innerHTML = title;
+                    itemRemove.innerHTML = 'Remove';
+                    newItem.append(itemCheckbox);
+                    newItem.append(itemText);
+                    newItem.append(itemRemove);
+                    this.items[id] = newItem;
+                    checked ? IList.checkItem(id, checked) : this.updateList();
+                    this.textField.value = '';
+                },
                 updateList() {
-                    console.log('update');
                     this.list.innerHTML = '';
                     this.items.forEach((item, index) => {
                         item.dataset.itemId = index;
@@ -64,15 +89,26 @@
                     let itemCheckbox = this.items[itemId].querySelector('input');
                     itemCheckbox.checked = status;
                     this.items[itemId].classList.toggle('done');
+                    let patchItemData = {checked: status};
+                    patchData(`http://localhost:3000/ToDoList/${itemId}`, patchItemData)
                     this.updateList();
                 },
                 removeItem(itemId) {
                     this.items.splice(itemId, 1);
+                    removeData(`http://localhost:3000/ToDoList/${itemId}`);
                     this.updateList();
                 },
             }
-
             IList.init();
+
+            // Get TodoList from DB
+            let listFromDB = await getData('http://localhost:3000/ToDoList');
+            // Create TodoList if DB is not empty
+            if (listFromDB.length > 0) {
+                listFromDB.forEach((listItem) => {
+                    IList.renderItem(listItem.id, listItem.title, listItem.checked);
+                });
+            }
         });
     </script>
 </head>
