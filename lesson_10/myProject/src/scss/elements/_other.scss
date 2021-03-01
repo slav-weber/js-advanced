@@ -1,0 +1,83 @@
+// Icon styles
+.icon,
+.theme-icon {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 0.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #eee;
+  text-decoration: none;
+}
+
+blockquote {
+  quotes: "" "";
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+}

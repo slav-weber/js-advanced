@@ -1,0 +1,36 @@
+form {
+  margin-bottom: 2rem;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="time"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  height: 45px;
+}
+
+textarea {
+  min-height: 90px;
+  resize: none;
+  overflow: hidden;
+}
+
+input[type="button"],
+input[type="submit"] {
+  @extend .btn;
+  @extend .btn-primary;
+}

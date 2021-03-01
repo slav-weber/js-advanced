@@ -1,0 +1,52 @@
+$font-family-main: 'Mukta', -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
+$font-family-alternative: 'Mukta', -apple-system, system-ui, BlinkMacSystemFont, Arial, sans-serif;
+
+$font-family-title: $font-family-alternative;
+$font-family-content: $font-family-main;
+
+$color-primary: #32b16e;
+$color-secondary: rgb(57, 75, 100);
+$color-soft: rgb(240, 254, 255);
+$color-alternative: rgb(197, 189, 24);
+
+$text-color-default: rgb(62, 62, 62);
+$text-color-alternative: rgb(134, 134, 134);
+$text-color-soft: rgb(248, 252, 255);
+$text-color-light: rgb(255, 255, 255);
+
+$bg-color-alternative: linear-gradient(-79deg, rgb(161, 197, 23) 0%, rgb(71, 164, 49) 100%);
+$bg-color-alternative-hover: linear-gradient(-79deg, rgb(129, 165, 23) 0%, rgb(61, 124, 48) 100%);
+
+// Breakpoints which will change container width
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        ws: 1710px
+);
+
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        ws: 1680px
+);
+
+/**
+  Main container max width
+ */
+$container-max-width: 1680px;
+
+/*
+  Theme breakpoints
+*/
+$screen-ws: 1710px;
+$screen-xl: 1200px;
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 0px;

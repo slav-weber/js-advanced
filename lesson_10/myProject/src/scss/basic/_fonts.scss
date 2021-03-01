@@ -1,0 +1,29 @@
+@mixin font-face($font-family, $url) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url('#{$url}.eot');
+    src: url('#{$url}.eot?#iefix') format('embedded-opentype'),
+    url('#{$url}.woff') format('woff'),
+    url('#{$url}.ttf') format('truetype'),
+    url('#{$url}.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Mukta:400,600,700&display=swap&subset=latin-ext');
+
+/*
+  1. Include font by @mixin font-face($font-family, $url)
+ */
+// @include font-face('FontAwesome', '../../fonts/fontawesome-webfont')
+
+/*
+  2. Include font from node module
+ */
+// @import "~nodemodule-font/scss/font-sans.scss";
+
+/*
+  3. Include font by scss @import from google fonts
+ */
+// @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
