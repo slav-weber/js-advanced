@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="Lesson 9, refactor structure of task 1-4">
-      <change afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/public/libs/helpers.js" afterDir="false" />
+    <list default="true" id="d551044e-c15d-4acc-ab31-364d3b8581de" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/db.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/tasks/task_5/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_9/tasks/task_5/task_5.html" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_9/tasks/task_5/public/index.html" afterDir="false" />
     </list>
     <list id="de5360a1-9ecd-439c-bc8c-474f91d55349" name="Lesson 9, refactor structure of task 1-4" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,14 +134,9 @@
       <workItem from="1614261141350" duration="14000" />
       <workItem from="1614269709017" duration="97000" />
       <workItem from="1614361803260" duration="2129000" />
-      <workItem from="1614412517641" duration="4975000" />
-    </task>
-    <task id="LOCAL-00006" summary="Project refactor">
-      <created>1611847460630</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1611847460631</updated>
+      <workItem from="1614412517641" duration="5045000" />
+      <workItem from="1614514910935" duration="4000" />
+      <workItem from="1614580842543" duration="694000" />
     </task>
     <task id="LOCAL-00007" summary="Update workspace.xml">
       <created>1611847891692</created>
@@ -488,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614413685974</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Lesson 9, task 5">
+      <created>1614417591276</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1614417591276</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,9 +536,9 @@
     <MESSAGE value="Lesson 9, task 1, 2, 3" />
     <MESSAGE value="Lesson 9, task 4" />
     <MESSAGE value="Lesson 9, task 3" />
-    <MESSAGE value="Lesson 9, task 5" />
     <MESSAGE value="Lesson 9, refactor structure of task 1-4" />
     <MESSAGE value="Lesson 9, refactor structure of task 1-5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9, refactor structure of task 1-5" />
+    <MESSAGE value="Lesson 9, task 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lesson 9, task 5" />
   </component>
 </project>
