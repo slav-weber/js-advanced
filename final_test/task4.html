@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--
+1. При помощи fetch получить данные:
+ http://www.json-generator.com/api/json/get/cgwbLkTxnS?indent=2
+2. Полученый ответ преобразовать в json вызвав метод .json с объекта ответа
+3. На основе данных посторить табличку
+
+| index | company | email | phone | address |
+
+4. создать кнопу которая скрывает показывает address
+ -->
+<table>
+    <tbody id="result">
+
+    </tbody>
+</table>
+<script>
+    document.addEventListener('DOMContentLoaded', async ()=> {
+        let resultElement = document.querySelector('#result');
+        let list = await getData('http://www.json-generator.com/api/json/get/cgwbLkTxnS?indent=2');
+        console.log(list);
+        renderList(list, resultElement)
+    });
+
+    async function getData(url) {
+        let promise = await fetch(url);
+        let data = await promise.json();
+        return data;
+    }
+
+    function renderList(companiesList, resultElement) {
+        let tableElement = document.createElement('table');
+        let titlesElement = document.createElement('tr');
+        titlesElement.innerHTML = `
+            <th>
+                #
+            </th>
+            <th>
+                Company
+            </th>
+            <th>
+                E-Mail
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                Visibility
+            </th>
+        `
+        tableElement.append(titlesElement);
+        companiesList.forEach((company, index) => {
+            let companyElement = document.createElement('tr');
+            companyElement.innerHTML = `
+                        <td>
+                            ${index}
+                        </td>
+                        <td>
+                            ${company.company}
+                        </td>
+                        <td>
+                            ${company.email}
+                        </td>
+                        <td>
+                           ${company.phone}
+                        </td>
+                        <td>
+                            <span>****</span><span class="hidden">${company.address}</span>
+                        </td>
+                        <td>
+                            <button>Show/Hide</button>
+                        </td>
+                    `;
+            companyElement.addEventListener('click', (event) => {
+                if (event.target.localName === 'button') {
+                    console.log('hide/show');
+                    let spans = companyElement.querySelectorAll('span');
+                    spans.forEach(span => {
+                        span.classList.toggle('hidden');
+                    })
+                }
+            });
+            tableElement.append(companyElement);
+        });
+
+        resultElement.append(tableElement);
+    }
+</script>
+</body>
+</html>
