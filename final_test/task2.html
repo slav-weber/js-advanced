@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Task 1</title>
+    <script>
+        /*
+          Задание:
+            Сделать валидацию формы:
+            1. Логин / Пароль не может быть пустым
+            2. то поле, которое не прошло валидацию подсвечивать красным, которое прошло - подсвечивать зеленым.
+            3. Пока не стоит что юзер согласен с лиц. соглашением - кнопка отправки не активна
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            let form = document.querySelector('#MyValidateForm');
+            let loginField = form.querySelector('[name="login"]');
+            let passField = form.querySelector('[name="pas1"]');
+            let passRepeatField = form.querySelector('[name="pas2"]');
+            let gdprCheckbox = form.querySelector('#agree');
+            let sendBtn = form.querySelector('#submit');
+
+            form.addEventListener('change', (event) => {
+                let validationRate = formValidation();
+                if (validationRate === 4) {
+                    sendBtn.disabled = false
+                } else {
+                    sendBtn.disabled = true
+                }
+                ;
+            });
+
+            function formValidation() {
+                let validationRate = 0;
+                if (loginField.value.length > 0) {
+                    loginField.classList.remove('error');
+                    loginField.classList.add('OK');
+                    validationRate++;
+                } else {
+                    loginField.classList.add('error');
+                    loginField.classList.remove('OK');
+                }
+
+                if (passField.value.length > 0) {
+                    passField.classList.remove('error');
+                    passField.classList.add('OK');
+                    validationRate++;
+                } else {
+                    passField.classList.add('error');
+                    passField.classList.remove('OK');
+                }
+
+                if (passRepeatField.value.length > 0) {
+                    passRepeatField.classList.remove('error');
+                    passRepeatField.classList.add('OK');
+                    validationRate++;
+                } else {
+                    passRepeatField.classList.add('error');
+                    passRepeatField.classList.remove('OK');
+                }
+
+                if (gdprCheckbox.checked) {
+                    gdprCheckbox.classList.remove('error');
+                    gdprCheckbox.classList.add('OK');
+                    validationRate++;
+                } else {
+                    gdprCheckbox.classList.add('error');
+                    gdprCheckbox.classList.remove('OK');
+                }
+                return validationRate;
+            }
+
+        });
+    </script>
+</head>
+<body>
+<form id="MyValidateForm">
+    <input type="text" name='login' placeholder="Ваш логин"/>
+    <input type="password" name='pas1' placeholder="Ваш пароль"/>
+    <input type="password" name='pas2' placeholder="Повторите пароль"/>
+    <label for="agree">
+        <span>Вы согласны с лицензионым соглашением.</span>
+        <input type="checkbox" id="agree"/>
+    </label>
+    <input type="submit" id="submit" value="Отправить" disabled/>
+</form>
+
+<style>
+    #MyValidateForm {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #MyValidateForm input {
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        padding: 10px 20px;
+    }
+
+    .error {
+        border: 1px solid red;
+    }
+
+    .OK {
+        border: 1px solid green;
+    }
+</style>
+</body>
+</html>
